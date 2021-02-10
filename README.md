@@ -2,7 +2,18 @@
 
 The ESP8266 WiFi Analyzer project can be found originally [here](https://github.com/moononournation/ESP8266WiFiAnalyzer). However, for organizational purposes, I ended up creating my own repository containing the best worked schematics.
 
-## Connections
+## Hardware
+
+This project requires the following hardware in order to work:
+
+* Any ESP8266 Board
+* 2.4" TFT Touch Screen w/ ili9341
+* Jumper Wires
+* Breadboard
+
+### Connections
+
+Make the following connections between your 2.4" TFT Screen and your ESP8266 board.
 
 | 2.4" TFT | ESP8266|
 | -------- | ------ |
