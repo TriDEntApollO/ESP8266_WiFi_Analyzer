@@ -4,8 +4,10 @@ The ESP8266 WiFi Analyzer project can be found originally [here](https://github.
 
 # Features
 
-- Visualize the WiFi signal information around you.
-- Pause scanning to hold the current Signal inofrmations on screen until resumed.
+- Wifi Scan: Scan and visualize the WiFi signal information around you.
+- Pause Scan: Pauses scanning to hold the current Signal inofrmations on screen until resumed.
+- Deep Sleep: The ESP8266 goes into a deep sleep mode and turns off the screen after a set amount of scans, suited for battery poower devices **(Disabled by default)**.
+- Splash screen: Shows a logo and the name banner at start (is this a feature tho? lol)
 
 ## Hardware
 
@@ -38,7 +40,7 @@ Popular ESPP8266 dev boards:
 
 ### Connections
 
-Make the following connections between your 2.4" TFT Screen and your ESP8266 board.
+Make the following connections between your 2.4" TFT Screen and your ESP8266 board:
 
 | 2.4" TFT | ESP8266     |
 | -------- | ----------- |
@@ -51,7 +53,20 @@ Make the following connections between your 2.4" TFT Screen and your ESP8266 boa
 | SCK      | D5 (GPIO14) |
 | LED      | 3V3         |
 
-Make these conections for Scan with the push button switch (not included in the Instructables guide).
+For using the Deep Sleep Feature make these connetions (different form the connections in the Instructables guide):
+
+| 2.4" TFT | ESP8266     |
+| -------- | ----------- |
+| VCC      | D4 (GPIO2)  |
+| GND      | GND         |
+| CS       | D8 (GPIO15) |
+| RESET    | RST         |
+| D/C      | D1 (GPIO5)  |
+| MOSI     | D7 (GPIO13) |
+| SCK      | D5 (GPIO14) |
+| LED      | D6 (GPIO12) |
+
+Make these conections for toggling Scan pause with the push button switch (not included in the Instructables guide):
 
 | Push Button | ESP8266    |
 | ----------- | ---------- |

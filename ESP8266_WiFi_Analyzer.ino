@@ -11,7 +11,7 @@
 //#define ST7735_144GREENTAB
 
 // //POWER SAVING SETTING
-// #define SCAN_COUNT_SLEEP 5
+#define SCAN_COUNT_SLEEP 5
 // // Uncomment this option if using PNP transistor control LCD power
 // // #define PNP_PWR_TRANSISTOR
 
@@ -23,7 +23,7 @@
 // #define LCD_PWR_PIN 4 // D2
 // #else
 // #define LCD_PWR_PIN 4 // D2
-// #define LED_PWR_PIN 2 // D4
+// #define LED_PWR_PIN 12 // D6
 // #endif
 
 #include "ESP8266WiFi.h"
