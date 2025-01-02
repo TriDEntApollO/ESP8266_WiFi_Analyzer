@@ -20,9 +20,9 @@
 #define LED_PIN 2 // Built in LED
 
 // #if defined(PNP_PWR_TRANSISTOR)
-// #define LCD_PWR_PIN 4 // D2
+// #define LCD_PWR_PIN 2 // D4
 // #else
-// #define LCD_PWR_PIN 4 // D2
+// #define LCD_PWR_PIN 2 // D4
 // #define LED_PWR_PIN 12 // D6
 // #endif
 

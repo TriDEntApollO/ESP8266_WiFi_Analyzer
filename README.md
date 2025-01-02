@@ -2,12 +2,18 @@
 
 The ESP8266 WiFi Analyzer project can be found originally [here](https://github.com/moononournation/ESP8266WiFiAnalyzer). However, for organizational purposes, I created my own repoisotry because i wanted to add a *Pause Scan* feature and also added a splash screen logo.
 
+![Preview](./preview.jpg)
+*Preview*
+
 # Features
 
 - Wifi Scan: Scan and visualize the WiFi signal information around you.
 - Pause Scan: Pauses scanning to hold the current Signal inofrmations on screen until resumed.
-- Deep Sleep: The ESP8266 goes into a deep sleep mode and turns off the screen after a set amount of scans, suited for battery poower devices **(Disabled by default)**.
+- Deep Sleep: The ESP8266 goes into a deep sleep mode and turns off the screen after a set amount of scans, suited for battery poower devices **(Disabled by default, to enable open the <u>.ino</u> file in Arduino IDE and uncomment the requred lines )**.
 - Splash screen: Shows a logo and the name banner at start (is this a feature tho? lol)
+
+![SplashScreen](./splash_screen.jpg)
+*Splash Screen*
 
 ## Hardware
 
@@ -73,6 +79,34 @@ Make these conections for toggling Scan pause with the push button switch (not i
 | PIN 1       | GND        |
 | PIN 2       | D2 (GPIO4) |
 
+
+# Installation
+
+To install/flash the firmware to your esp8266 board there are 2 methods, you can either use a esp flasher tool to flash the binary or use Arduino IDE.
+
+### Method: ESP Flasher Tool
+
+- There are two softwares you can use for this [NodeMCU-Flasher](https://github.com/nodemcu/nodemcu-flasher) and [Spacehuhn's ESPWebTool](https://esp.huhn.me) (Recommended).
+- Choose your sofware of choice.
+- Click on connect button and select the COM port of your ESP8266 dev board for <u>ESPWebTool</u> or just select the COM port of your board from the drop down list on the <u>NodeMCU-Flasher</u>.
+- Download the latest bin file from [here](https://github.com/TriDEntApollO/ESP8266_WiFi_Analyzer/releases/tag/v0.2.2).
+- Select offset <u>0x00000</u> and upload the <u>bin</u> file to the selected offset.
+- Click the Flash/Program button and wait for few mins to finish uploading the firmware.
+
+### Method: Arduino IDE
+
+- Install Arduino IDE from [here](https://www.arduino.cc/en/software).
+- Install Required Board manager:
+  - Open Arduino IDE and open Preferences (Click on File -> Preferences)
+  - Copy and paste this URL in the <u>Aditional boards manager URLs section</u> http://arduino.esp8266.com/stable/package_esp8266com_index.json
+  - Restart Arduino IDE.
+  - Go to board manager and search for [esp8266](https://github.com/esp8266/Arduino) by ESP8266 Community and install it.
+- Install required libraries:
+  - Go to library manager.
+  - Search for [Adafruit ST7735](https://github.com/adafruit/Adafruit-ST7735-Library) and install it.
+  - Search for [Adafruit ILI9341](https://github.com/adafruit/Adafruit_ILI9341) and install it.
+- From the dropdown menu at the top right side of the screen belo the title bar Select your ESP8266 dev baord and COM port (modify these seetings form the Tools section in the title bar).
+- Click on upload (The Arrow button at the top right corner of the screen) and wait for it to finish.
 
 ## Please find more details at instructables
 
